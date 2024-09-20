@@ -25,7 +25,7 @@
 
   <ion-list [inset]="true">
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding (click)="presentActionSheet()">
 
       <ion-item [button]="true">
 
@@ -35,7 +35,7 @@
 
         </ion-avatar>
 
-        <ion-label>Rick Astley</ion-label>
+        <ion-label>Ives Pinedo</ion-label>
 
       </ion-item>
 
@@ -66,7 +66,7 @@
 
 
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding>
 
       <ion-item [button]="true">
 
@@ -107,7 +107,7 @@
 
 
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding>
 
       <ion-item [button]="true">
 
@@ -148,7 +148,7 @@
 
 
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding>
 
       <ion-item [button]="true">
 
@@ -189,7 +189,7 @@
 
 
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding>
 
       <ion-item [button]="true">
 
@@ -230,7 +230,7 @@
 
 
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding>
 
       <ion-item [button]="true">
 
@@ -271,7 +271,7 @@
 
 
 
-    <ion-item-sliding id="open-action-sheet">
+    <ion-item-sliding>
 
       <ion-item [button]="true">
 
@@ -309,10 +309,10 @@
 
     </ion-item-sliding>
 
+
   </ion-list>
 
-<!-- lista de opciones para editar -->
-
-<ion-action-sheet trigger="open-action-sheet" header="Actions" [buttons]="actionSheetButtons"></ion-action-sheet>
+<!-- <ion-button id="open-action-sheet">Open</ion-button>
+<ion-action-sheet trigger="open-action-sheet" header="Actions" [buttons]="actionSheetButtons"></ion-action-sheet> -->
 
 </ion-content>

@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
 
-// import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+// import { IonContent, IonHeader, IonTitle, IonToolbar, IonActionSheet } from '@ionic/angular/standalone';
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ActionSheetController } from '@ionic/angular';
 
 
 
@@ -29,40 +29,59 @@ import { IonicModule } from '@ionic/angular';
 
 export class UsuariosPage implements OnInit {
 
+  // public actionSheetButtons = [
+  //   {
+  //     text: 'Editar',
+  //     role: 'destructive',
+  //     data: {
+  //       action: 'edit',
+  //     },
+  //   },
+  //   {
+  //     text: 'Eliminar',
+  //     role: 'destructive',
+  //     data: {
+  //       action: 'delete',
+  //     },
+  //   },
+
+  // ];
+
+
+  constructor(private actionSheetCtrl: ActionSheetController) { }
+
+  async presentActionSheet(){
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: "Lista de opciones",
+      buttons: [
+        {
+          text: "Editar",
+          handler: () => {
+            alert("Seleccionaste editar")
+          }
+        },
+        {
+          text: "Eliminar",
+          handler: () => {
+            alert("Seleccionaste eliminar")
+          }
+        },
+      ]
+    });
+    await actionSheet.present();
+  }
 
 
 
-  constructor() { }
-
-  public actionSheetButtons = [
-    {
-      text: 'Delete',
-      role: 'destructive',
-      data: {
-        action: 'delete',
-      },
-    },
-    {
-      text: 'Share',
-      data: {
-        action: 'share',
-      },
-    },
-    {
-      text: 'Cancel',
-      role: 'cancel',
-      data: {
-        action: 'cancel',
-      },
-    },
-  ];
 
   ngOnInit() {
 
   }
+
+
+
+
 }
-
-
 
 
 
