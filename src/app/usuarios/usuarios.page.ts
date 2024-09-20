@@ -34,16 +34,39 @@ export class UsuariosPage implements OnInit {
 
   constructor() { }
 
-
-
+  public actionSheetButtons = [
+    {
+      text: 'Delete',
+      role: 'destructive',
+      data: {
+        action: 'delete',
+      },
+    },
+    {
+      text: 'Share',
+      data: {
+        action: 'share',
+      },
+    },
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      data: {
+        action: 'cancel',
+      },
+    },
+  ];
 
   ngOnInit() {
 
   }
-
-
-
-
 }
+
+
+
+
+
+
+
 
 
