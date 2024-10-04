@@ -3,10 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
-
-// import { IonContent, IonHeader, IonTitle, IonToolbar, IonActionSheet } from '@ionic/angular/standalone';
-
 import { IonicModule, ActionSheetController } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,13 +19,31 @@ import { IonicModule, ActionSheetController } from '@ionic/angular';
 
   standalone: true,
 
-  imports: [ IonicModule ],
-
-  // imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [ IonicModule, CommonModule, IonicModule, RouterModule ]
 
 })
 
-export class UsuariosPage implements OnInit {
+export class UsuariosPage  {
+
+  //array
+  items = ['item1','item2','item3','item4'];
+
+  //json
+
+  usuarios = {
+    '0': {
+      nombre: "juan",
+      apellidos: "perez",
+      direccion: "jr patita 147"
+    },
+    '1': {
+      nombre: "juan",
+      apellidos: "perez",
+      direccion: "jr patita 147"
+    },
+
+
+  }
 
   // public actionSheetButtons = [
   //   {
@@ -74,9 +90,7 @@ export class UsuariosPage implements OnInit {
 
 
 
-  ngOnInit() {
 
-  }
 
 
 
