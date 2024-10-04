@@ -313,6 +313,14 @@
 
 
   </ion-list>
+  <ion-infinite-scroll theshold="100px" (ioniInfinite) ="loadMore($event)">
+    <ion-infinite-scroll-content
+    loadingSpineer=""bubbles
+    loadingText="cargando mas datos....">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 
 <!-- <ion-button id="open-action-sheet">Open</ion-button>
 <ion-action-sheet trigger="open-action-sheet" header="Actions" [buttons]="actionSheetButtons"></ion-action-sheet> -->
